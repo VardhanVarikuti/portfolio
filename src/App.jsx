@@ -104,7 +104,7 @@ const projects = [
     title: 'Real-Time Stock Market Analytics Dashboard',
     highlight: 'Built an interactive dashboard to analyze stock trends and market sentiment with 5s update intervals',
     problem: 'Stock market data is often complex and difficult to interpret, making it challenging for analysts and stakeholders to quickly identify trends, volatility, and trading patterns.',
-    desc: 'Developed a real-time Power BI dashboard tracking 15+ critical KPIs like bullish/bearish trends and volatility. Engineered automated data pipelines with Power Query to refresh at 5-second intervals, providing deep analysis of 12 months of historical and live market trends.',
+    desc: 'Developed a real-time Power BI dashboard tracking 15+ critical KPIs like bullish/bearish trends and volatility. Engineered automated data pipelines with Power Query to refresh at 5-second intervals, providing deep analysis of 3 years of historical and live market trends.',
     tags: ['Stock Analysis', 'Business Intelligence', 'Data Visualization', 'KPI Analysis'],
     tech: ['Power BI', 'DAX', 'Power Query'],
     github: 'https://github.com/VardhanVarikuti/Real-Time-Stock-Market-Analytics-Dashboard',
@@ -174,19 +174,19 @@ const certifications = [
     preview: 'src/assets/py basic.png'
   },
   {
-    icon: 'logos:hackerrank',
+    icon: 'simple-icons:hackerrank',
     title: 'SQL (Basic)',
     org: 'HackerRank',
     preview: 'src/assets/sql basic.png'
   },
   {
-    icon: 'logos:hackerrank',
+    icon: 'simple-icons:hackerrank',
     title: 'SQL (Intermediate)',
     org: 'HackerRank',
     preview: 'src/assets/sql inter.png'
   },
   {
-    icon: 'logos:hackerrank',
+    icon: 'simple-icons:hackerrank',
     title: 'Problem Solving (Intermediate)',
     org: 'HackerRank',
     preview: 'src/assets/pro inter.png'
@@ -403,8 +403,8 @@ const Hero = ({ splashPhase, splashName, roleIdx, setIsResumeOpen }) => {
 
               <div className={`hero-ctas-row${isDone ? ' visible' : ''}`}>
                 <a href="#projects" className="btn-pill btn-pill-filled">↓ View Work</a>
-                <button 
-                  onClick={() => setIsResumeOpen(true)} 
+                <button
+                  onClick={() => setIsResumeOpen(true)}
                   className="btn-pill"
                   style={{ background: 'none', border: '1px solid var(--border)', color: 'var(--text)', cursor: 'pointer', fontFamily: 'inherit' }}
                 >
@@ -899,7 +899,7 @@ function App() {
         <Footer />
       </div>
 
-      
+
 
       {isResumeOpen && (
         <div
