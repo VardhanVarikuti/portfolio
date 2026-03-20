@@ -76,7 +76,7 @@ const projects = [
     title: 'AI-Powered Business Intelligence Agent',
     highlight: 'Automated SQL generation and insights, reducing analysis time by 80%',
     problem: 'Business stakeholders struggle to extract insights from data without technical SQL knowledge, leading to delays and dependency on data teams.',
-    desc: 'Built an agentic AI system that converts natural language queries into validated SQL, executes them on PostgreSQL, and generates insights with visual summaries. Integrated query validation, schema understanding, and context-aware reasoning using LLMs.',
+    desc: 'Built an agentic AI system that converts natural language queries into validated SQL with 95% accuracy. Integrated query validation, schema understanding, and context-aware reasoning using LLMs to automate 50+ manual reports, reducing data dependency significantly.',
     tags: ['Agentic AI', 'NL to SQL', 'Automation', 'LLM Systems'],
     tech: ['Python', 'PostgreSQL', 'LangChain', 'ChromaDB', 'Groq API', 'Pandas'],
     github: 'https://github.com/VardhanVarikuti/ai-bi-agent',
@@ -90,7 +90,7 @@ const projects = [
     title: 'Customer Segmentation using RFM & Clustering',
     highlight: 'Segmented customers into actionable groups for targeted marketing strategies',
     problem: 'Businesses often lack clarity on customer behavior, making it difficult to target high-value users and optimize marketing efforts.',
-    desc: 'Performed RFM (Recency, Frequency, Monetary) analysis on customer transaction data and applied K-Means clustering to identify distinct customer segments. Enabled data-driven marketing strategies by distinguishing loyal, at-risk, and high-value customers.',
+    desc: 'Performed RFM analysis on customer transaction data and applied K-Means clustering to identify 4 distinct behavioral segments. Analyzed behavior for 10k+ users to identify high-value clusters, enabling data-driven marketing and optimized retention strategies.',
     tags: ['Clustering', 'RFM Analysis', 'Customer Analytics', 'Segmentation'],
     tech: ['Python', 'Pandas', 'NumPy', 'Scikit-learn', 'Matplotlib'],
     github: 'https://github.com/VardhanVarikuti/customer-segmentation-retail',
@@ -102,9 +102,9 @@ const projects = [
     visual: 'Stock Market Analytics',
     visualSub: 'Business Intelligence',
     title: 'Real-Time Stock Market Analytics Dashboard',
-    highlight: 'Built an interactive dashboard to analyze stock trends, trading volume, and market sentiment for data-driven decision-making',
+    highlight: 'Built an interactive dashboard to analyze stock trends and market sentiment with 5s update intervals',
     problem: 'Stock market data is often complex and difficult to interpret, making it challenging for analysts and stakeholders to quickly identify trends, volatility, and trading patterns.',
-    desc: 'Developed a Power BI dashboard to analyze stock performance using KPIs such as bullish/bearish trends, trading volume, and price movements. Utilized Power Query for data transformation and DAX for dynamic calculations, enabling interactive filtering and time-based analysis for actionable insights.',
+    desc: 'Developed a real-time Power BI dashboard tracking 15+ critical KPIs like bullish/bearish trends and volatility. Engineered automated data pipelines with Power Query to refresh at 5-second intervals, providing deep analysis of 12 months of historical and live market trends.',
     tags: ['Stock Analysis', 'Business Intelligence', 'Data Visualization', 'KPI Analysis'],
     tech: ['Power BI', 'DAX', 'Power Query'],
     github: 'https://github.com/VardhanVarikuti/Real-Time-Stock-Market-Analytics-Dashboard',
@@ -116,9 +116,9 @@ const projects = [
     visual: 'Bicycle Dashboard',
     visualSub: 'Business Analysis',
     title: 'Bicycle Sales Dashboard using Excel & DAX',
-    highlight: 'Derived actionable insights from sales data to support business decision-making',
+    highlight: 'Derived actionable insights from $2M+ sales data to support business decision-making',
     problem: 'Businesses often struggle to interpret raw sales data and identify meaningful trends for improving performance and strategy.',
-    desc: 'Developed a comprehensive dashboard using Excel and DAX to analyze bicycle sales data across different dimensions such as time, customer segments, and product categories. Designed interactive UI elements using PowerPoint to enhance data storytelling and presentation clarity.',
+    desc: 'Developed a comprehensive dashboard using Excel and DAX to analyze over $2M in sales data across diverse segments. Identified 5 key actionable growth insights and automated the reporting workflow, reducing monthly reporting and analysis time by 60%.',
     tags: ['Dashboarding', 'Data Analysis', 'DAX', 'Business Insights'],
     tech: ['Excel', 'DAX', 'PowerPoint'],
     github: 'https://github.com/VardhanVarikuti/bicycle-dashboard',
@@ -174,31 +174,31 @@ const certifications = [
     preview: 'src/assets/py basic.png'
   },
   {
-    icon: '🗄️',
+    icon: 'logos:hackerrank',
     title: 'SQL (Basic)',
     org: 'HackerRank',
     preview: 'src/assets/sql basic.png'
   },
   {
-    icon: '🗄️',
+    icon: 'logos:hackerrank',
     title: 'SQL (Intermediate)',
     org: 'HackerRank',
     preview: 'src/assets/sql inter.png'
   },
   {
-    icon: '🧩',
+    icon: 'logos:hackerrank',
     title: 'Problem Solving (Intermediate)',
     org: 'HackerRank',
     preview: 'src/assets/pro inter.png'
   },
   {
-    icon: '🔐',
+    icon: 'mdi:security-network',
     title: 'Privacy and Security in Online Social Media',
     org: 'NPTEL',
     preview: 'src/assets/nptel.png'
   },
   {
-    icon: '🌐',
+    icon: 'logos:google-icon',
     title: 'The Bits and Bytes of Computer Networking',
     org: 'Google · Coursera',
     preview: 'src/assets/bits and bytes.png'
@@ -654,7 +654,9 @@ function Certifications({ setHoveredPreview }) {
               onMouseEnter={() => setHoveredPreview({ active: true, img: c.preview })}
               onMouseLeave={() => setHoveredPreview({ active: false, img: null })}
             >
-              <div className="cert-row-icon">{c.icon}</div>
+              <div className="cert-row-icon">
+                <iconify-icon icon={c.icon} style={{ fontSize: '1.2rem' }} />
+              </div>
               <div className="cert-row-info">
                 <h3>{c.title}</h3>
                 <p>{c.org}</p>
