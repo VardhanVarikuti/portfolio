@@ -1,6 +1,4 @@
 import { useState, useEffect, useCallback } from 'react';
-import profileImg from './assets/profile.png';
-import resumeFile from './assets/resume.pdf';
 import './index.css';
 
 /* ===========================
@@ -80,7 +78,7 @@ const projects = [
     tags: ['Agentic AI', 'NL to SQL', 'Automation', 'LLM Systems'],
     tech: ['Python', 'PostgreSQL', 'LangChain', 'ChromaDB', 'Groq API', 'Pandas'],
     github: 'https://github.com/VardhanVarikuti/ai-bi-agent',
-    preview: 'src/assets/ai-bi.png'
+    preview: '/ai-bi.png'
   },
   {
     id: 2,
@@ -94,7 +92,7 @@ const projects = [
     tags: ['Clustering', 'RFM Analysis', 'Customer Analytics', 'Segmentation'],
     tech: ['Python', 'Pandas', 'NumPy', 'Scikit-learn', 'Matplotlib'],
     github: 'https://github.com/VardhanVarikuti/customer-segmentation-retail',
-    preview: 'src/assets/segmentation.png'
+    preview: '/segmentation.png'
   },
   {
     id: 3,
@@ -108,7 +106,7 @@ const projects = [
     tags: ['Stock Analysis', 'Business Intelligence', 'Data Visualization', 'KPI Analysis'],
     tech: ['Power BI', 'DAX', 'Power Query'],
     github: 'https://github.com/VardhanVarikuti/Real-Time-Stock-Market-Analytics-Dashboard',
-    preview: ''
+    preview: '/stock.jpeg'
   },
   {
     id: 4,
@@ -122,7 +120,7 @@ const projects = [
     tags: ['Dashboarding', 'Data Analysis', 'DAX', 'Business Insights'],
     tech: ['Excel', 'DAX', 'PowerPoint'],
     github: 'https://github.com/VardhanVarikuti/bicycle-dashboard',
-    preview: 'src/assets/bicycle.png'
+    preview: '/bicycle.png'
   }
 ];
 
@@ -168,40 +166,40 @@ const techStack = {
 
 const certifications = [
   {
-    icon: '💻',
+    icon: 'simple-icons:hackerrank',
     title: 'Python (Basic)',
     org: 'HackerRank',
-    preview: 'src/assets/py basic.png'
+    preview: '/py basic.png'
   },
   {
     icon: 'simple-icons:hackerrank',
     title: 'SQL (Basic)',
     org: 'HackerRank',
-    preview: 'src/assets/sql basic.png'
+    preview: '/sql basic.png'
   },
   {
     icon: 'simple-icons:hackerrank',
     title: 'SQL (Intermediate)',
     org: 'HackerRank',
-    preview: 'src/assets/sql inter.png'
+    preview: '/sql inter.png'
   },
   {
     icon: 'simple-icons:hackerrank',
     title: 'Problem Solving (Intermediate)',
     org: 'HackerRank',
-    preview: 'src/assets/pro inter.png'
+    preview: '/pro inter.png'
   },
   {
     icon: 'mdi:security-network',
     title: 'Privacy and Security in Online Social Media',
     org: 'NPTEL',
-    preview: 'src/assets/nptel.png'
+    preview: '/nptel.png'
   },
   {
     icon: 'logos:google-icon',
     title: 'The Bits and Bytes of Computer Networking',
     org: 'Google · Coursera',
-    preview: 'src/assets/bits and bytes.png'
+    preview: '/bits and bytes.png'
   }
 
 ];
@@ -211,7 +209,7 @@ const navLinks = [
   { id: 'projects', label: 'Work' },
   { id: 'services', label: 'Skills' },
   { id: 'tech', label: 'Stack' },
-  { id: 'certs', label: 'Certs' },
+  { id: 'certs', label: 'Certificates' },
   { id: 'education', label: 'Education' },
   { id: 'contact', label: 'Contact' },
 ];
@@ -420,7 +418,7 @@ const Hero = ({ splashPhase, splashName, roleIdx, setIsResumeOpen }) => {
             {/* Right side — profile photo */}
             <div className={`hero-right${isDone ? ' visible' : ''}`}>
               <div className="hero-photo-container">
-                <img src={profileImg} alt="Vardhan Varikuti" className="hero-photo" />
+                <img src="/profile.png" alt="Vardhan Varikuti" className="hero-photo" />
               </div>
             </div>
           </div>
@@ -914,12 +912,12 @@ function App() {
             </button>
             <div className="resume-content">
               <iframe
-                src={resumeFile}
+                src="/resume.pdf"
                 title="Resume Preview"
                 className="resume-iframe"
               />
               <div className="resume-footer">
-                <p>Don't see the preview? <a href={resumeFile} download="Vardhan_Varikuti_Resume.pdf" target="_blank" rel="noopener noreferrer">Download PDF</a></p>
+                <p>Don't see the preview? <a href="/resume.pdf" download="Vardhan_Varikuti_Resume.pdf" target="_blank" rel="noopener noreferrer">Download PDF</a></p>
               </div>
             </div>
           </div>
