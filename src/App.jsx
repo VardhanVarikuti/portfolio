@@ -150,7 +150,6 @@ const techStack = {
   'Tools & Platforms': [
     { name: 'Git', icon: 'logos:git-icon' },
     { name: 'Docker', icon: 'logos:docker-icon' },
-    { name: 'AWS', icon: 'logos:aws' },
     { name: 'Jupyter', icon: 'logos:jupyter' },
     { name: 'VS Code', icon: 'logos:visual-studio-code' },
     { name: 'Linux', icon: 'logos:linux-tux' },
@@ -190,6 +189,12 @@ const certifications = [
     preview: '/pro inter.png'
   },
   {
+    icon: '/DeepLearning-AI.png',
+    title: 'Supervised Machine Learning: Regression and Classification',
+    org: 'DeepLearning.AI · Stanford University · Coursera',
+    preview: '/supervised.png'
+  },
+  {
     icon: 'mdi:security-network',
     title: 'Privacy and Security in Online Social Media',
     org: 'NPTEL',
@@ -200,7 +205,7 @@ const certifications = [
     title: 'The Bits and Bytes of Computer Networking',
     org: 'Google · Coursera',
     preview: '/bits and bytes.png'
-  }
+  },
 
 ];
 
@@ -653,7 +658,11 @@ function Certifications({ setHoveredPreview }) {
               onMouseLeave={() => setHoveredPreview({ active: false, img: null })}
             >
               <div className="cert-row-icon">
-                <iconify-icon icon={c.icon} style={{ fontSize: '1.2rem' }} />
+                {c.icon.startsWith('/') || c.icon.startsWith('http') ? (
+                  <img src={c.icon} alt="" style={{ width: '1.2rem', height: '1.2rem', objectFit: 'contain' }} />
+                ) : (
+                  <iconify-icon icon={c.icon} style={{ fontSize: '1.2rem' }} />
+                )}
               </div>
               <div className="cert-row-info">
                 <h3>{c.title}</h3>
