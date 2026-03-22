@@ -195,7 +195,7 @@ const certifications = [
     preview: '/supervised.png'
   },
   {
-    icon: 'mdi:security-network',
+    icon: '/swayam.png',
     title: 'Privacy and Security in Online Social Media',
     org: 'NPTEL',
     preview: '/nptel.png'
